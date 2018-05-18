@@ -26,7 +26,7 @@ defmodule Babylon.Printer do
   Handle incoming lists of numbers by simply printing them to screen every 1
   second.
 
-      iex> Printer.handle_events([1, 2, 3], nil, :state_not_applicable)
+      iex> Printer.handle_events([1, 2, 3], self(), :state_not_applicable)
       [1, 2, 3]
       {:noreply, [], :state_not_applicable}
   """

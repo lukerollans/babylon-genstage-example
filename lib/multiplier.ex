@@ -24,7 +24,7 @@ defmodule Babylon.Multiplier do
   Handle incoming lists of numbers, multiply them by the given factor
   which is stored in state and produce the resultant list
 
-      iex> Multiplier.handle_events([1, 2, 3], nil, 5)
+      iex> Multiplier.handle_events([1, 2, 3], self(), 5)
       {:noreply, [5, 10, 15], 5}
   """
   def handle_events(events, _from, factor) do
