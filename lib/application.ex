@@ -7,6 +7,10 @@ defmodule Babylon.Application do
   def start(_type, _args) do
     import Supervisor.Spec, warn: false
 
+    ###
+    ### Stages are not supervised to make this as clear as possible
+    ###
+
     # Start first job at 1
     {:ok, incrementer} = Babylon.Incrementer.start_link(100)
 
